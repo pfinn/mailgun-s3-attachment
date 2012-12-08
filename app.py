@@ -1,9 +1,7 @@
 from boto.s3.key import Key
 from boto.s3.connection import S3Connection
 from flask import Flask, request
-import requests
 import hashlib
-import boto
 import time
 import os
 
@@ -19,7 +17,7 @@ def get_s3_bucket():
 	conn = S3Connection(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
 	return conn.create_bucket(S3_BUCKET_NAME)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
 	if request.method == "GET":
 		return "Create a <a href='http://www.mailgun.com/'>Mailgun</a> route:<br/><br/>\
@@ -38,7 +36,7 @@ def store_attachments():
 
 			key = Key(bucket)
 
-			#Store the unix timestamp and original album name (email subject)
+			#Include UNIX timestamp in object metadata
 			key.set_metadata("timestamp", str(int(time.time())))
 
 			#Set filename and upload
