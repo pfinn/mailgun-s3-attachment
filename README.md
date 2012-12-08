@@ -20,6 +20,7 @@ Many, many things.
 * Your will also need to provide a globally unique bucket name for storing attachments on line 14 of *app.py*
 
 * Commit changes to git repo
+
 ## Launch
     C:\> heroku create
     C:\> git push heroku master
