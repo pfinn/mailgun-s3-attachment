@@ -21,7 +21,6 @@ Many, many things.
 
 * Commit changes to git repo
 ## Launch
-
     C:\> heroku create
     C:\> git push heroku master
     C:\> heroku open
