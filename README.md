@@ -7,7 +7,7 @@ A Heroku-ready Flask.py application that creates an HTTP endpoint for parsing an
 ## What This Is Not
 Many, many things.
 
-## Pre-Requisets
+## Prerequisites
 * Working credentials/accounts for Amazon AWS/S3, Heroku and Mailgun
 
 ## Getting Started
