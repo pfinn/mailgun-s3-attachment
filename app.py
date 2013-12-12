@@ -41,7 +41,7 @@ def store_attachments():
 
 			#Set filename and upload
 			key.key = attachment.filename
-			key.set_contents_from_filename(filename)
+			key.set_contents_from_filename(attachment.filename)
 
 	#Mailgun wants to see a HTTP 200 response
 	return "200 OK"
